@@ -37,7 +37,18 @@ export class CardComponent implements OnInit {
           types: res.types,
         };
       },
-      error: (err) => console.log(err),
+      error: (err) => {
+        console.log(err);
+        this.pokemon = {
+          id: 0,
+          name: 'Unfound Pokémon!',
+          sprites: {
+            front_default:
+              'https://www.sqwordle.io/static/media/pokeball-2.ead60815894a4642571c.png',
+          },
+          types: [{ slot: 1, type: { name: 'Null  ', url: '' } }],
+        };
+      },
     });
   }
 
