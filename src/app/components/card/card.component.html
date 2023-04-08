@@ -1,6 +1,6 @@
 <div class="container">
   <div class="searchBox">
-    <input type="text" (input)="setSearchText($any($event.target).value)" />
+    <input type="text" [(ngModel)]="searchText" />
     <button type="button" (click)="getPokemon(searchText)">Search</button>
   </div>
 

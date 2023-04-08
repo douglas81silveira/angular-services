@@ -51,8 +51,4 @@ export class CardComponent implements OnInit {
       },
     });
   }
-
-  setSearchText(searchText: string) {
-    this.searchText = searchText;
-  }
 }
